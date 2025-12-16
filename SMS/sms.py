@@ -7,12 +7,14 @@ class Student:
     def __init__(self, name, age):
         self.name = name
         self.age = age
+        
 
-def get_age():
+def get_age():#type: ignore
     while True:
         try:
             birth_year = int(input("Enter birth year (e.g. 2003): "))
             current_year = date.today().year
+
             return current_year - birth_year
         except ValueError:
             print("Invalid year. Try again.")
